@@ -17,8 +17,8 @@ class CreatePerformanceReviewReviewee extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('performance_review_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('performance_review_id')->references('id')->on('performance_reviews');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('performance_review_id')->references('id')->on('performance_reviews')->onDelete('cascade');
 
         });
     }

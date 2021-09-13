@@ -59,7 +59,11 @@ cp .env.example .env
 ```bash
 php artisan key:generate
 ```
-7.  Database
+7. Unit Test
+```bash
+php artisan test
+```
+8. Database
 ```bash
 generate Mysql Database name="database_name" in Mysql 
 ``` 
@@ -72,7 +76,22 @@ run seeder to add default account to use to login
 ```bash
 php artisan db:seed
 ```
+9. Default credentials to use in login :
+```bash
+email : admin@gmail.com
+password : 12345678
+```
 Now you have a ready to use clone of the application.
+
+## Notes 
+Take care if run 
+```bash 
+php artisan test
+```
+run seed again and use Default credentials to use in login
+```bash
+php artisan db:seed
+```
 
 ## How To?
 

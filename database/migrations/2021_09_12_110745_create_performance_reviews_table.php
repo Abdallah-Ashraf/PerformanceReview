@@ -20,7 +20,7 @@ class CreatePerformanceReviewsTable extends Migration
             $table->text('feedback')->nullable();
             $table->enum('status',['Open','Closed'])->default('Open');
             $table->unsignedBigInteger('reviewer_id');
-            $table->foreign('reviewer_id')->references('id')->on('users');
+            $table->foreign('reviewer_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
